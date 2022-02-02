@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { UserContext } from "./Contexts/UserContext.js";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { ProtectedRoute } from "./Protected/ProtectedRoute.js";
-import Login from "./User/Login";
+import Login from "./User/Login.jsx";
 import PageCrypto from "./Page/PageCrypto/Crypto.jsx";
 import NoMatch from "./Page/NoMatch/NoMatch.jsx";
 import axios from "axios";
@@ -37,17 +37,16 @@ function App() {
     <UserContext.Provider
       value={{ user, setUser, isAuthenticated, setIsAuthenticated }}
     >
-      <main className="grid">
+      <div className="app">
         <Routes>
-          <Route path="/user-login" element={<Login />} />
-
+          <Route exact path="/" element={<Login />} />
           <Route path="user" element={<ProtectedRoute />}>
             <Route path="crypto" element={<PageCrypto />} />
           </Route>
           <Route path="/404" element={<NoMatch />} />
           <Route path="*" element={<Navigate to="/404" />} />
         </Routes>
-      </main>
+      </div>
     </UserContext.Provider>
   );
 }
