@@ -27,7 +27,7 @@ const Login = () => {
 
   return (
     <div className="Login">
-      <h1 className="login-title">Login</h1>
+      <h1 className="login-title">Login Game</h1>
       <form onSubmit={handleSubmit}>
         {error && <p>{error}</p>}
         <input

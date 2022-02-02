@@ -4,7 +4,7 @@ import { UserContext } from "./Contexts/UserContext.js";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { ProtectedRoute } from "./Protected/ProtectedRoute.js";
 import Login from "./User/Login.jsx";
-import PageCrypto from "./Page/PageCrypto/Crypto.jsx";
+import PageCrypto from "./Page/PageGame/Game.jsx";
 import NoMatch from "./Page/NoMatch/NoMatch.jsx";
 import axios from "axios";
 
