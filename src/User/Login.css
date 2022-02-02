@@ -1,0 +1,11 @@
+.Login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-title {
+    text-align: center;
+    font-size: 15vh;
+}
