@@ -1,5 +1,4 @@
 .card-container {
-
     justify-content: space-between;
     flex-wrap: wrap;
     margin: auto;
@@ -7,9 +6,7 @@
     min-height: 30%;
     border: 1px solid #000000;
     border-radius: 25px;
-    margin: 10px;
-
-
+    margin-top: 1.5vh;
 }
 
 .card-img {
@@ -19,8 +16,4 @@
     object-fit: cover;
     margin: 0;
     border-radius: 25px;
-}
-
-h1 {
-    font-size: 1.2em;
 }

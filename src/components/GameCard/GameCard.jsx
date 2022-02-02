@@ -6,10 +6,10 @@ const GameCard = ({ name, image, genre, release, score }) => {
     <div className="card-container">
       <img className="card-img" src={image} alt={name}></img>
       <div className="info">
-        <h1>{name}</h1>
+        <h2>{name}</h2>
         <p>{genre}</p>
-        <h1>date de sortie : {release}</h1>
-        <h1>score : {score}</h1>
+        <h2>date de sortie : {release}</h2>
+        <h2>score : {score}</h2>
       </div>
     </div>
   );

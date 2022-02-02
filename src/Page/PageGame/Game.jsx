@@ -16,8 +16,9 @@ function Game() {
   useEffect(() => {}, []);
 
   const getGames = async () => {
+    let slug = data.split(" ").join("-").toLowerCase();
     try {
-      const gamesList = await apiData(`games?search=${data}`, "&");
+      const gamesList = await apiData(`games?search=${slug}`, "&");
 
       console.log(gamesList.results);
       setAllData(gamesList.results);
@@ -29,7 +30,9 @@ function Game() {
 
   return (
     <div className="App">
+      <h1>Tout Vos jeux reunis ici</h1>
       <input
+        className="input-game"
         value={data}
         onChange={handleSearchValue}
         type="text"
@@ -38,7 +41,6 @@ function Game() {
         required
         size="100%"
         placeholder="Entrer votre jeu"
-        className="question"
         autocomplete="off"
       />
       <label for="nme"></label>

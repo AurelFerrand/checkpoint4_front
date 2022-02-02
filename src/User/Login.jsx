@@ -27,9 +27,8 @@ const Login = () => {
 
   return (
     <div className="Login">
-      <h1 className="login-title">Login Game</h1>
+      <h1>Login Game</h1>
       <form onSubmit={handleSubmit}>
-        {error && <p>{error}</p>}
         <input
           type="text"
           name="email"
@@ -50,6 +49,7 @@ const Login = () => {
           Se Connecter
         </button>
       </form>
+      {error && <p className="error">{error}</p>}
     </div>
   );
 };
