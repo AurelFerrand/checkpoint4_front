@@ -17,3 +17,19 @@
     margin: 0;
     border-radius: 25px;
 }
+
+.isFavorite {
+    cursor: pointer;
+
+    color: red;
+    align-self: flex-start;
+    font-size: 2.5vh;
+}
+
+.notFavorite {
+    cursor: pointer;
+    font-size: 2.5vh;
+    color: #005374;
+    opacity: 0.5;
+    align-self: flex-start;
+}

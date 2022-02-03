@@ -2,6 +2,7 @@ import "./Game.css";
 import apiData from "../../Api/ApiGame";
 import { useState, useEffect } from "react";
 import GameCard from "../../components/GameCard/GameCard";
+import TableFavorite from "../../components/TableFavorite/TableFavorite";
 
 function Game() {
   const [allData, setAllData] = useState([]);
@@ -9,8 +10,8 @@ function Game() {
   const [data, setData] = useState("");
 
   const handleSearchValue = (e) => {
-    setData(e.target.value);
     getGames();
+    setData(e.target.value);
   };
 
   useEffect(() => {}, []);
@@ -20,7 +21,6 @@ function Game() {
     try {
       const gamesList = await apiData(`games?search=${slug}`, "&");
 
-      console.log(gamesList.results);
       setAllData(gamesList.results);
       setFilteredData(gamesList.results);
     } catch (err) {
@@ -30,6 +30,7 @@ function Game() {
 
   return (
     <div className="App">
+      <TableFavorite />
       <h1>Tout Vos jeux reunis ici</h1>
       <input
         className="input-game"
@@ -48,6 +49,7 @@ function Game() {
         {filteredData.map((c) => (
           <GameCard
             key={c?.id}
+            id={c?.id}
             name={c?.name}
             image={c?.background_image}
             genre={c.genres[0]?.name}
