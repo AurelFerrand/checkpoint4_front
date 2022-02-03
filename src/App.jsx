@@ -4,7 +4,7 @@ import { UserContext } from "./Contexts/UserContext.js";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { ProtectedRoute } from "./Protected/ProtectedRoute.js";
 import Login from "./User/Login.jsx";
-import PageCrypto from "./Page/PageCrypto/Crypto.jsx";
+import PageGame from "./Page/PageGame/Game.jsx";
 import NoMatch from "./Page/NoMatch/NoMatch.jsx";
 import axios from "axios";
 
@@ -41,7 +41,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Login />} />
           <Route path="user" element={<ProtectedRoute />}>
-            <Route path="crypto" element={<PageCrypto />} />
+            <Route path="game" element={<PageGame />} />
           </Route>
           <Route path="/404" element={<NoMatch />} />
           <Route path="*" element={<Navigate to="/404" />} />

@@ -1,3 +1,42 @@
 .app {
   width: 100vw;
 }
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #29292965;
+}
+
+input {
+  border: 2px solid #be0000a8;
+  border-radius: 25px;
+  display: block;
+  font-family: cursive;
+  font-size: 2.5vh;
+  width: 70%;
+  padding: 10px;
+  outline-color: #00b135;
+  margin: auto;
+  margin-top: 3vh;
+}
+
+h1 {
+  font-size: 8vh;
+  font-family: cursive;
+}
+
+h2 {
+  font-size: 1.2em;
+  font-family: cursive;
+}
+
+button {
+  font-size: 3vh;
+  font-family: cursive;
+  margin-top: 5vh;
+  border-radius: 50px;
+  height: 5vh;
+  background-color: rgba(207, 201, 201, 0.5);
+}

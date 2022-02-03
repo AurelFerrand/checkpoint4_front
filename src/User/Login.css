@@ -5,7 +5,9 @@
     align-items: center;
 }
 
-.login-title {
-    text-align: center;
-    font-size: 15vh;
+.error {
+    color: rgba(255, 0, 0, 0.705);
+    font-size: 2.5vh;
+    font-weight: bold;
+    font-family: cursive;
 }

@@ -1,0 +1,35 @@
+.card-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+    min-width: 20%;
+    min-height: 30%;
+    border: 1px solid #000000;
+    border-radius: 25px;
+    margin-top: 1.5vh;
+}
+
+.card-img {
+    border-radius: 2px;
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+    margin: 0;
+    border-radius: 25px;
+}
+
+.isFavorite {
+    cursor: pointer;
+
+    color: red;
+    align-self: flex-start;
+    font-size: 2.5vh;
+}
+
+.notFavorite {
+    cursor: pointer;
+    font-size: 2.5vh;
+    color: #005374;
+    opacity: 0.5;
+    align-self: flex-start;
+}

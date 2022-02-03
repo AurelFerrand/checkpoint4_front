@@ -1,0 +1,12 @@
+.App {
+    text-align: center;
+}
+
+.article {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.input-game {
+    width: 40%;
+}
